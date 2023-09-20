@@ -67,21 +67,70 @@ a {
   text-decoration: none;
 }
 
-#recherche{
-    display: flex;
-    flex-direction: column;
-    gap: 35px
+#recherche {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 }
 
 #title-recherche h1 {
-    margin-bottom: 8px;
-  }
+  margin-bottom: 8px;
+}
 
-  #title-recherche p {
-    margin-top: 0px;
-    margin-bottom: 0px;
+#title-recherche p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 
+#form {
+  display: flex;
+}
+
+.loc-container {
+  /* border: 2px solid blue; */
+  border-radius: 15px 0 0 15px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-location-dot {
+    color: black;
+    font-size: 16px;
   }
+  
+
+#form input {
+  border-left: none;
+  border-right: none;
+  border-top: 2px solid;
+  border-color: var(--main-bg-color);
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+
+}
+
+.btnSearch{
+    border-radius: 0 15px 15px 0;
+    border: none;
+    background-color: var(--main-color);
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnSearch i {
+    display: none;
+}
 
 #info {
   width: 100%;
@@ -222,8 +271,6 @@ a {
     margin: 0;
   }
   .main-container {
-    width: 100%;
-    margin: 0;
     padding: 0;
   }
   header {
@@ -255,10 +302,7 @@ a {
     width: 0;
   }
   #recherche {
-    display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -266,10 +310,30 @@ a {
   #title-recherche {
     display: flex;
     flex-direction: column;
-    justify-content: center;
   }
- 
+
   #title-recherche h1 {
     margin-bottom: 8px;
   }
+  #form input{
+    flex: 1;
+  }
+  
+  .btnSearch {
+    border-radius: 15px;
+    width: 50px; 
+    height: 50px; 
+    padding: 0; 
+    margin-left: -10px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);/*box-shadow: horizontal vertical flou couleur(red=0, green=0, blue=0, opacité= 0.2 sur 1 max);*/
+}
+
+.btnSearch span {
+    display: none; /* Masque le texte à l'intérieur du bouton */
+}
+
+.btnSearch i {
+    display: inline-block; /* Affiche l'icône */
+    color: white;
+}
 }
