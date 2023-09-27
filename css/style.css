@@ -40,45 +40,44 @@ header img {
   padding: 30px 0;
 }
 
-nav {
+nav ul {
   display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
-nav a {
-  padding: 0 16px;
-  position: relative;
+nav ul li {
+  padding: 18px 16px;
 }
 
-nav a:after {
-  content: "";
-  position: absolute;
-  background-color: var(--main-color);
-  height: 2px;
-  width: 0;
-  left: 0;
-}
-nav a:hover {
-  color: var(--main-color);
-}
-nav a:hover:after {
-  width: 100%;
-}
-a {
+.navLink {
   color: inherit;
   text-decoration: none;
 }
 
-#recherche {
+.navLink span:hover {
+  border-top: 2px solid var(--main-color);
+  padding-top: 16.5px;
+  color: var(--main-color);
+}
+
+.btnFont {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+#search {
   display: flex;
   flex-direction: column;
   gap: 35px;
 }
 
-#title-recherche h1 {
+#search-title h1 {
   margin-bottom: 8px;
 }
 
-#title-recherche p {
+#search-title p {
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -88,7 +87,6 @@ a {
 }
 
 .loc-container {
-  /* border: 2px solid blue; */
   border-radius: 15px 0 0 15px;
   width: 50px;
   height: 50px;
@@ -109,8 +107,6 @@ a {
   border-top: 2px solid;
   border-color: var(--main-bg-color);
   text-align: center;
-  font-weight: 700;
-  font-size: 16px;
 }
 
 .btnSearch {
@@ -118,9 +114,6 @@ a {
   border: none;
   background-color: var(--main-color);
   color: white;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
   padding: 15px;
   display: flex;
   justify-content: center;
@@ -131,7 +124,7 @@ a {
   display: none;
 }
 
-#filtres {
+#filters {
   display: flex;
   height: 50px;
   align-items: center;
@@ -139,47 +132,51 @@ a {
   margin-bottom: 0;
 }
 
-#filtres h3 {
-  font-size: 22px;
-  font-weight: 700;
-}
-
-.filtresBtns {
+.filtersBtns {
   display: flex;
   gap: 15px;
 }
 
-.filtresBtns button {
+.filtersBtns button {
   flex: 1;
-  padding-left: 19px;
-  padding-right: 19px;
-  padding-bottom: 8px;
-  padding-top: 8px;
+  padding: 8px 19px;
   height: 100%;
   border: 2px solid var(--grey-tint-2);
   background-color: white;
   border-radius: 50px;
-  font-size: 16px;
-  font-weight: 700;
   display: flex;
   align-items: center;
   text-align: center;
   white-space: nowrap;
 }
 
-#filtres button:hover {
+#filters button:hover {
   background-color: var(--filter-bg-color);
 }
 
-#filtres button i {
+#filters button i {
   margin-right: 10px;
 }
 
 #info {
   width: 100%;
   display: flex;
+
   align-items: center;
-    margin-bottom: 35px;
+  gap: 10px;
+  margin-bottom: 35px;
+}
+
+.infoIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 24px;
+  min-height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--grey-tint-2);
+  padding: 5px;
+  overflow: hidden;
 }
 
 .section-title {
@@ -278,16 +275,22 @@ a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-  #filtres {
+  /* .navLink:active,.navLink:focus {
+        border-top: 2px solid var(--main-color);
+        padding-top: 16.5px;
+        color: var(--main-color);
+      } */
+
+  #filters {
     flex-direction: column;
     align-items: baseline;
     gap: 0;
     margin-bottom: 35px;
   }
 
-#filtres h3{
+  #filters h2 {
     margin-bottom: 20px;
-}
+  }
   .hebergements-and-populaires {
     flex-direction: column;
   }
@@ -338,35 +341,32 @@ a {
     margin: 0;
   }
   nav {
+    width: 100vw;
+  }
+
+  nav ul li {
+    border-bottom: 2px solid var(--main-bg-color);
     width: 100%;
   }
-
-  nav a {
-    flex-wrap: wrap;
-    padding-bottom: 15px;
-    flex: 1;
-    text-align: center;
-    border-bottom: 2px solid var(--main-bg-color);
+  .navLink span:hover {
+    border-top: none;
   }
-
-  nav a:hover {
+  nav ul li:hover {
     color: var(--main-color);
     border-bottom: 2px solid var(--main-color);
   }
-  nav a:hover:after {
-    width: 0;
-  }
-  #recherche {
-    margin-left: 20px;
-    margin-right: 20px;
+
+  #search {
+    padding: 0 20px;
   }
 
-  #title-recherche {
+  #search-title {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
-  #title-recherche h1 {
+  #search-title h1 {
     margin-bottom: 8px;
   }
   #form input {
@@ -391,19 +391,25 @@ a {
     color: white;
   }
 
-   #filtres h3 {
+  #filters h2 {
     font-size: 16px;
   }
 
-  .filtresBtns {
+  .filtersBtns {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(2, 1fr); /* Crée une grille à deux colonnes */
   }
-  .filtresBtns button {
+  .filtersBtns button {
     font-size: 14px;
   }
 
-  #info{
+  #info {
     margin-top: 35px;
+  }
+  
+  .infoIcon{
+    width: 10px;
+    height: 10px;
   }
 }
