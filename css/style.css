@@ -195,7 +195,7 @@ gap: 8px;
   font-size: 22px;
 }
 
-.section-subtitle {
+.section-subtitle, .footer-subtitle {
   font-size: 18px;
   font-weight: 700;
   margin: 0;
@@ -387,7 +387,7 @@ footer section {
   padding: 20px;
 }
 
-footer .section-subtitle {
+.footer-subtitle {
   margin-bottom: 15px;
 }
 
