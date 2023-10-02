@@ -291,8 +291,8 @@ nav ul li {
 }
 
 .populaires-cards a {
-    flex: 1;
-  }
+  flex: 1;
+}
 
 .populaires-cards .card {
   display: flex;
@@ -329,40 +329,43 @@ nav ul li {
 
 /****** Activités ***********/
 
-#activites{
-    padding: 30px;
-    margin-bottom: 35px;
+#activites {
+  padding: 30px;
+  margin-bottom: 35px;
 }
 
-.activites-cards{
-    display: flex;
-    padding-top: 30px;
-    gap: 30px;
+.activites-cards {
+  display: flex;
+  padding-top: 30px;
+  gap: 30px;
 }
 
-.activites-cards a{
-    flex: 1;
+.activites-cards a {
+  flex: 1;
 }
 
-.activites-cards .card{
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    height: 439px;
+.activites-cards .card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  height: 439px;
 }
 
-.activites-cards img{
-    height: 380px;
-    width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+.activites-cards img {
+  height: 380px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
-.activites-cards .card-content{
-    padding: 20px 19px ;
+.activites-cards .card-content {
+  padding: 20px 19px;
+  position: relative;
 }
 
-
+.activites-cards .card-title {
+  position: absolute;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
@@ -400,17 +403,16 @@ nav ul li {
     padding-top: 20px;
   }
 
- .populaires-cards .card {
+  .populaires-cards .card {
     margin: 0;
   }
 
-.activites-cards .card{
+  .activites-cards .card {
     height: 270px;
-}
-.activites-cards img{
+  }
+  .activites-cards img {
     height: 200px;
-}
-
+  }
 }
 
 /* Small devices (phones, less than 768px) */
@@ -501,5 +503,49 @@ nav ul li {
   .infoIcon {
     width: 10px;
     height: 10px;
+  }
+
+  .hebergements-and-populaires {
+    flex-direction: column-reverse;
+  }
+
+  .hebergements-and-populaires section {
+    border-radius: 0;
+  }
+
+  #hebergements {
+    background-color: white;
+    padding: 20px;
+  }
+
+  .hebergements-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 15px;
+  }
+  .populaires {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  .populaires-cards {
+    flex-direction: column;
+  }
+
+  .activites-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .activites-cards .card {
+    height: auto;
+  }
+  .activites-cards img {
+    height: 141px;
+  }
+
+  .activites-cards .card-title {
+    position: initial;
   }
 }
