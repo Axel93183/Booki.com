@@ -5,8 +5,8 @@
 
 :root {
   --main-color: #0065fc;
-  --main-bg-color: #f2f2f2;
-  --filter-bg-color: #deebff;
+  --main-bg-color: #f2f2f2;/*light gray*/
+  --filter-bg-color: #deebff;/*light blue*/
   --grey-tint-2: #d9d9d9;
 }
 
@@ -131,6 +131,10 @@ gap: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.btnSearch:hover{
+    cursor: pointer;
 }
 
 .btnSearch i {
