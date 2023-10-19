@@ -426,9 +426,7 @@ footer ul {
   }
 
   .populaires-cards {
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
     gap: 20px;
     padding-top: 20px;
   }
@@ -564,7 +562,6 @@ footer ul {
   }
 
   .activites-cards {
-    display: flex;
     flex-direction: column;
     gap: 15px;
   }
